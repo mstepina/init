@@ -1,0 +1,10 @@
+cut -d: -f1,3 /etc/passwd | egrep ':[0-9]{4}$' | cut -d: -f1
+
+# cuts the first (username) and third (UID) colon-delimited fields from /etc/passwd
+# then filters for the resulting lines which end with a colon and four digits
+# then cuts the first (username) field from that
+# result: a list of users with UIDs between 1000 and 9999
+# (Human users have UIDs starting at 1000)
+
+# If you have more than nine thousand users on your system, this will fail
+# It's necessary to restrict the result to 4-digit UIDs in order not to catch nobody (UID 65534)

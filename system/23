@@ -1,0 +1,6 @@
+#Graphic session:
+#click 'switch user' at the top tight corner of the VM, 
+#then login/password for a different user
+
+# ssh session:
+# <username>@<ipadress>, then enter password for this user
